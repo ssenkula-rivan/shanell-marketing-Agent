@@ -1,0 +1,2495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanell Marketing Agency - Digital Marketing Excellence</title>
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Shanell Marketing Agency - Premier digital marketing solutions that drive growth, enhance brand visibility, and deliver measurable results for your business.">
+    <meta name="keywords" content="digital marketing, social media marketing, SEO, brand growth, marketing agency">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 4px;
+        }
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.15);
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-dark) !important;
+            position: relative;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        .nav-link:hover {
+            color: #667eea !important;
+            transform: translateY(-2px);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        /* Language Selector */
+        .language-selector {
+            position: relative;
+        }
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            min-width: 120px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover .language-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .learn-more-btn {
+            background: var(--primary-gradient);
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            border: none;
+            display: inline-block;
+        }
+        .learn-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            color: white !important;
+        }
+        .btn-featured {
+            background: var(--secondary-gradient) !important;
+        }
+        .btn-success {
+            background: var(--success-gradient) !important;
+            border: none;
+        }
+        .btn-warning {
+            background: var(--warning-gradient) !important;
+            border: none;
+        }
+        /* Hero Section */
+        .banner_wrapper {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner_wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .banner-subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .banner-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .banner-title span {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .banner-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .hero-image {
+            animation: heroFloat 3s ease-in-out infinite;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        /* Video Modal */
+        .video-modal .modal-dialog {
+            max-width: 800px;
+        }
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .video-play-btn:hover {
+            background: white;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        /* Newsletter Subscription */
+        .newsletter-section {
+            background: var(--primary-gradient);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .newsletter-input {
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow);
+        }
+        /* Interactive Tools */
+        .calculator-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .calculator-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        .calculator-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .calculator-input {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+        }
+        .calculator-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .calculator-result {
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* Blog Section */
+        .blog-section {
+            padding: 100px 0;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .blog-image {
+            height: 250px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        .blog-content {
+            padding: 2rem;
+        }
+        .blog-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        /* Resource Library */
+        .resource-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .resource-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+        }
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .resource-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+        /* Client Portal */
+        .portal-section {
+            padding: 100px 0;
+        }
+        .portal-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .portal-feature {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .portal-feature:last-child {
+            border-bottom: none;
+        }
+        .portal-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 1.2rem;
+        }
+        /* Analytics Dashboard Preview */
+        .dashboard-preview {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+        .metric-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        .metric-card:hover {
+            background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-5px);
+        }
+        .metric-number {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        /* Webinar Section */
+        .webinar-section {
+            padding: 100px 0;
+            background: var(--dark-gradient);
+            color: white;
+        }
+        .webinar-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .webinar-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+        }
+        .webinar-date {
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        /* Live Chat Button */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        .chat-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .chat-btn:hover {
+            transform: scale(1.1);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(102, 126, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+        }
+        /* FAQ Search */
+        .faq-search {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+        }
+        .search-input {
+            border-radius: 50px;
+            border: 2px solid #e9ecef;
+            padding: 15px 25px;
+            padding-left: 50px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        /* Section Styling */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .section-subtitle {
+            color: #667eea;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        /* About Section */
+        .about_wrapper {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .about_number {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .stats-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .stats-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        /* Features Section */
+        .features_wrapper {
+            padding: 100px 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+        .feature-card:nth-child(2n)::before {
+            background: var(--secondary-gradient);
+        }
+        .feature-card:nth-child(3n)::before {
+            background: var(--accent-gradient);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        /* Pricing Section */
+        .price_wrapper {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .pricing_card {
+            background: white;
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 100%;
+            text-align: center;
+        }
+        .pricing_card.featured {
+            background: var(--primary-gradient);
+            color: white;
+            transform: scale(1.05);
+        }
+        .pricing_card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+        .pricing_card.featured:hover {
+            transform: translateY(-10px) scale(1.07);
+        }
+        .pricing-ribbon {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .pricing_rate {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        /* Testimonial Section */
+        .testimonial_wrapper {
+            padding: 100px 0;
+        }
+        .testimonial_card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            margin: 2rem 0;
+        }
+        .testimonial_card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            font-size: 5rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+        /* Brand Section */
+        .brand_wrapper {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .brand-logo {
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        /* FAQ Section */
+        .faq_wrapper {
+            padding: 100px 0;
+        }
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .accordion-button {
+            background: white;
+            border: none;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .accordion-button:not(.collapsed) {
+            background: var(--primary-gradient);
+            color: white;
+        }
+        /* Footer */
+        .footer_wrapper {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        .footer_social_media_icon {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        .footer_social_media_icon:hover {
+            background: var(--primary-gradient);
+            transform: translateY(-3px);
+            color: white;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banner-title {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .pricing_card.featured {
+                transform: none;
+                margin: 20px 0;
+            }
+            .chat-widget {
+                bottom: 20px;
+                right: 20px;
+            }
+            .chat-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Modal Enhancements */
+        .modal-content {
+            border-radius: 20px;
+            border: none;
+            box-shadow: var(--shadow-hover);
+        }
+        .modal-header {
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 20px 20px 0 0;
+            border-bottom: none;
+        }
+        /* Social Media Feed */
+        .social-feed {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .social-feed:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .social-platform {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-rocket me-2"></i>Shanell
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tools">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#webinars">Webinars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item language-selector">
+                        <a class="nav-link" href="#" id="languageToggle">
+                            <i class="fas fa-globe me-1"></i>EN <i class="fas fa-caret-down ms-1"></i>
+                        </a>
+                        <div class="language-dropdown">
+                            <a href="#" class="dropdown-item px-3 py-2 text-decoration-none">English</a>
+                            <a href="#" class="dropdown-item px-3 py-2 text-decoration-none">Español</a>
+                            <a href="#" class="dropdown-item px-3 py-2 text-decoration-none">Français</a>
+                            <a href="#" class="dropdown-item px-3 py-2 text-decoration-none">Deutsch</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="learn-more-btn ms-3" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Client Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="banner_wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="banner-subtitle">Digital Marketing Excellence</p>
+                    <h1 class="banner-title">Elevate Your Brand to <span>New Heights</span></h1>
+                    <p class="banner-text">Transform your digital presence with our cutting-edge marketing strategies. We drive growth, enhance engagement, and deliver measurable results that propel your business forward.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#about" class="learn-more-btn pulse-btn">
+                            <i class="fas fa-rocket me-2"></i>Start Your Journey
+                        </a>
+                        <button class="learn-more-btn btn-featured" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <i class="fas fa-play me-2"></i>Watch Demo
+                        </button>
+                    </div>
+                    <!-- Newsletter Signup -->
+                    <div class="mt-4">
+                        <div class="input-group newsletter-form">
+                            <input type="email" class="form-control newsletter-input" placeholder="Enter your email for marketing tips" id="heroEmail">
+                            <button class="btn btn-success" type="button" onclick="subscribeNewsletter()">
+                                <i class="fas fa-paper-plane me-1"></i>Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="hero-image text-center position-relative">
+                        <i class="fas fa-chart-line" style="font-size: 15rem; color: rgba(255,255,255,0.3);"></i>
+                        <div class="video-play-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <i class="fas fa-play text-primary" style="font-size: 2rem; margin-left: 5px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal fade video-modal" id="videoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Shanell Marketing - Company Overview</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <div class="bg-dark d-flex align-items-center justify-content-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-video fa-5x mb-3 opacity-50"></i>
+                                <h4>Demo Video Coming Soon</h4>
+                                <p class="mb-0">Experience our platform with an interactive demo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about_wrapper">
+        <div class="container">
+            <!-- First About Block -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="about_number">01</span>
+                    <h2 class="section-title">Showcase Your Brand Beautifully</h2>
+                    <p class="lead">We craft compelling digital experiences that resonate with your audience and drive meaningful engagement. Our strategic approach combines creativity with data-driven insights to deliver exceptional results.</p>
+                    <div class="mt-4">
+                        <a href="#features" class="learn-more-btn me-3">Discover More</a>
+                        <a href="#" class="learn-more-btn btn-featured" data-bs-toggle="modal" data-bs-target="#caseStudyModal">View Case Study</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="dashboard-preview">
+                        <h5 class="mb-3">Live Analytics Preview</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number" id="visitorCount">1,234</div>
+                                    <div>Visitors Today</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number" id="conversionRate">3.2%</div>
+                                    <div>Conversion Rate</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number" id="socialReach">45K</div>
+                                    <div>Social Reach</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number" id="roiPercent">285%</div>
+                                    <div>ROI Increase</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Stats Section -->
+            <div class="row mt-5" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-card">
+                        <div class="stats-number">850+</div>
+                        <p class="mb-0">Completed Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-card">
+                        <div class="stats-number">750+</div>
+                        <p class="mb-0">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-card">
+                        <div class="stats-number">465+</div>
+                        <p class="mb-0">Ongoing Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-card">
+                        <div class="stats-number">158+</div>
+                        <p class="mb-0">Awards Won</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Our Services</p>
+                    <h2 class="section-title">Comprehensive Digital Solutions</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Strategic Consultancy</h3>
+                        <p>Expert guidance and strategic planning to optimize your digital marketing efforts and maximize ROI through data-driven insights and proven methodologies.</p>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="consultancy">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: var(--secondary-gradient);">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Technical Solutions</h3>
+                        <p>Cutting-edge technology implementation including marketing automation, CRM integration, and advanced analytics to streamline your marketing operations.</p>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="technical">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: var(--accent-gradient);">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Comprehensive reporting and real-time analytics dashboard providing actionable insights to track performance and optimize campaigns continuously.</p>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">View Demo</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: var(--success-gradient);">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Smart Notifications</h3>
+                        <p>Automated alerts and intelligent notifications to keep you informed about campaign performance, leads, and important milestones in real-time.</p>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="notifications">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: var(--warning-gradient);">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Management</h3>
+                        <p>Secure data collection, processing, and management solutions that ensure compliance and provide valuable insights for business growth.</p>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="data">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3>Scalable Solutions</h3>
+                        <p>Flexible and scalable marketing systems that grow with your business, adapting to changing needs and expanding market opportunities.</p>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="scalable">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Integration -->
+            <div class="row mt-5">
+                <div class="col-12 text-center mb-4">
+                    <h3>Follow Our Latest Updates</h3>
+                    <p class="text-muted">Stay connected with our social media channels</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="social-feed">
+                        <div class="social-platform">
+                            <i class="fab fa-twitter me-2"></i>Twitter
+                        </div>
+                        <p class="mb-2">"Just launched an amazing campaign for @ClientName! 🚀 Seeing incredible engagement rates. #DigitalMarketing #Success"</p>
+                        <small class="text-muted">2 hours ago</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="social-feed">
+                        <div class="social-platform">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn
+                        </div>
+                        <p class="mb-2">"New blog post: '10 Digital Marketing Trends for 2024' - Essential insights for modern marketers. Link in comments 👇"</p>
+                        <small class="text-muted">5 hours ago</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="social-feed">
+                        <div class="social-platform">
+                            <i class="fab fa-instagram me-2"></i>Instagram
+                        </div>
+                        <p class="mb-2">"Behind the scenes: Our team brainstorming creative campaign ideas ✨ Innovation never stops! #TeamWork #Creative"</p>
+                        <small class="text-muted">1 day ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Industry Insights</p>
+                    <h2 class="section-title">Latest from Our Blog</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-chart-trending-up"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <i class="fas fa-calendar me-2"></i>December 15, 2024
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-user me-2"></i>Sarah Johnson
+                            </div>
+                            <h4>10 Digital Marketing Trends for 2025</h4>
+                            <p>Discover the latest trends that will shape digital marketing in the coming year and how to leverage them for your business.</p>
+                            <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#blogModal" data-blog="trends">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="blog-card">
+                        <div class="blog-image" style="background: var(--secondary-gradient);">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <i class="fas fa-calendar me-2"></i>December 12, 2024
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-user me-2"></i>Mike Rodriguez
+                            </div>
+                            <h4>ROI Optimization Strategies</h4>
+                            <p>Learn proven strategies to maximize your marketing ROI and track the metrics that matter most for your business growth.</p>
+                            <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#blogModal" data-blog="roi">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="blog-card">
+                        <div class="blog-image" style="background: var(--accent-gradient);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <i class="fas fa-calendar me-2"></i>December 10, 2024
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-user me-2"></i>Emma Wilson
+                            </div>
+                            <h4>Building Brand Communities</h4>
+                            <p>How to create engaged communities around your brand using social media and digital platforms for long-term success.</p>
+                            <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#blogModal" data-blog="community">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="learn-more-btn" data-bs-toggle="modal" data-bs-target="#blogArchiveModal">
+                    <i class="fas fa-blog me-2"></i>View All Blog Posts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section id="tools" class="calculator-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Free Tools</p>
+                    <h2 class="section-title">Marketing Calculators & Tools</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="calculator-card">
+                        <h4 class="mb-4">
+                            <i class="fas fa-calculator text-primary me-2"></i>ROI Calculator
+                        </h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Marketing Spend ($)</label>
+                                <input type="number" class="form-control calculator-input" id="marketingSpend" placeholder="10000">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Revenue Generated ($)</label>
+                                <input type="number" class="form-control calculator-input" id="revenueGenerated" placeholder="30000">
+                            </div>
+                        </div>
+                        <button class="btn learn-more-btn" onclick="calculateROI()">Calculate ROI</button>
+                        <div id="roiResult" class="calculator-result" style="display: none;">
+                            <h5 class="mb-2">Your ROI Results</h5>
+                            <div class="d-flex justify-content-between">
+                                <span>ROI Percentage:</span>
+                                <span id="roiPercent"></span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Profit:</span>
+                                <span id="roiProfit"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="calculator-card">
+                        <h4 class="mb-4">
+                            <i class="fas fa-chart-pie text-success me-2"></i>Social Media Engagement Quiz
+                        </h4>
+                        <div class="mb-3">
+                            <label class="form-label">How often do you post on social media?</label>
+                            <select class="form-control calculator-input" id="postFrequency">
+                                <option value="">Select frequency</option>
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="rarely">Rarely</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Average engagement rate (%)</label>
+                            <input type="number" class="form-control calculator-input" id="engagementRate" placeholder="3.5">
+                        </div>
+                        <button class="btn learn-more-btn btn-success" onclick="calculateEngagement()">Get Recommendations</button>
+                        <div id="engagementResult" class="calculator-result" style="display: none; background: var(--success-gradient);">
+                            <h5 class="mb-2">Your Engagement Score</h5>
+                            <p id="engagementScore"></p>
+                            <p id="engagementRecommendation"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Library -->
+    <section id="resources" class="resource-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Knowledge Hub</p>
+                    <h2 class="section-title">Free Marketing Resources</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon" style="background: var(--primary-gradient);">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Digital Marketing Guide</h4>
+                        <p>Complete 50-page guide covering all aspects of digital marketing from strategy to execution.</p>
+                        <a href="#" class="learn-more-btn" onclick="downloadResource('guide')">
+                            <i class="fas fa-download me-2"></i>Download PDF
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="resource-card">
+                        <div class="resource-icon" style="background: var(--secondary-gradient);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>SEO Checklist</h4>
+                        <p>Comprehensive SEO checklist with 100+ actionable items to improve your search rankings.</p>
+                        <a href="#" class="learn-more-btn btn-featured" onclick="downloadResource('seo')">
+                            <i class="fas fa-download me-2"></i>Download PDF
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="resource-card">
+                        <div class="resource-icon" style="background: var(--accent-gradient);">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Content Calendar Template</h4>
+                        <p>Ready-to-use content calendar template for planning your social media and blog content.</p>
+                        <a href="#" class="learn-more-btn" onclick="downloadResource('calendar')">
+                            <i class="fas fa-download me-2"></i>Download Excel
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="resource-card">
+                        <div class="resource-icon" style="background: var(--success-gradient);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Buyer Persona Template</h4>
+                        <p>Create detailed buyer personas with our proven template and research methodology.</p>
+                        <a href="#" class="learn-more-btn btn-success" onclick="downloadResource('persona')">
+                            <i class="fas fa-download me-2"></i>Download PDF
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="resource-card">
+                        <div class="resource-icon" style="background: var(--warning-gradient);">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Templates</h4>
+                        <p>Professional email marketing templates for various campaigns and customer touchpoints.</p>
+                        <a href="#" class="learn-more-btn" onclick="downloadResource('email')">
+                            <i class="fas fa-download me-2"></i>Download ZIP
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="resource-card">
+                        <div class="resource-icon" style="background: var(--dark-gradient);">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>Case Study Collection</h4>
+                        <p>Real client success stories with detailed analysis and actionable insights for your business.</p>
+                        <a href="#" class="learn-more-btn" onclick="downloadResource('cases')">
+                            <i class="fas fa-download me-2"></i>Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Webinars Section -->
+    <section id="webinars" class="webinar-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle text-white-50">Learning Opportunities</p>
+                    <h2 class="section-title text-white">Upcoming Webinars & Workshops</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="webinar-card">
+                        <div class="webinar-date">Dec 20, 2024</div>
+                        <h4>Digital Marketing Mastery</h4>
+                        <p class="mb-3">Learn advanced strategies for digital marketing success in 2025. Cover SEO, social media, and content marketing.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span><i class="fas fa-clock me-2"></i>2 hours</span>
+                            <span><i class="fas fa-users me-2"></i>Limited seats</span>
+                        </div>
+                        <a href="#" class="learn-more-btn w-100" data-bs-toggle="modal" data-bs-target="#webinarModal" data-webinar="mastery">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="webinar-card">
+                        <div class="webinar-date">Dec 22, 2024</div>
+                        <h4>Analytics & Data-Driven Marketing</h4>
+                        <p class="mb-3">Deep dive into marketing analytics and how to use data to optimize your campaigns for better ROI.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span><i class="fas fa-clock me-2"></i>1.5 hours</span>
+                            <span><i class="fas fa-users me-2"></i>15 spots left</span>
+                        </div>
+                        <a href="#" class="learn-more-btn w-100 btn-featured" data-bs-toggle="modal" data-bs-target="#webinarModal" data-webinar="analytics">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="webinar-card">
+                        <div class="webinar-date">Dec 25, 2024</div>
+                        <h4>Social Media Strategy Workshop</h4>
+                        <p class="mb-3">Interactive workshop on creating effective social media strategies that drive engagement and conversions.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span><i class="fas fa-clock me-2"></i>3 hours</span>
+                            <span><i class="fas fa-users me-2"></i>Interactive</span>
+                        </div>
+                        <a href="#" class="learn-more-btn w-100" data-bs-toggle="modal" data-bs-target="#webinarModal" data-webinar="social">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="price_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Investment Plans</p>
+                    <h2 class="section-title">Choose Your Growth Strategy</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="pricing_card">
+                        <h3 class="pricing_period">Starter</h3>
+                        <div class="my-4">
+                            <i class="fas fa-rocket" style="font-size: 3rem; color: #667eea;"></i>
+                        </div>
+                        <div class="pricing_rate">FREE</div>
+                        <p class="pricing_text">Get started today</p>
+                        <ul class="list-unstyled mt-4">
+                            <li><i class="fas fa-check text-success me-2"></i>Basic Analytics</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Email Support</li>
+                            <li><i class="fas fa-check text-success me-2"></i>5 Social Accounts</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Resource Library Access</li>
+                            <li><i class="fas fa-times text-danger me-2"></i>Advanced Features</li>
+                        </ul>
+                        <a href="#contact" class="learn-more-btn w-100 mt-4">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="pricing_card featured">
+                        <div class="pricing-ribbon">
+                            <span>Most Popular</span>
+                        </div>
+                        <h3 class="pricing_period">Professional</h3>
+                        <div class="my-4">
+                            <i class="fas fa-crown" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="pricing_rate">₹4,999</div>
+                        <p class="pricing_text">per month</p>
+                        <ul class="list-unstyled mt-4">
+                            <li><i class="fas fa-check me-2"></i>Advanced Analytics</li>
+                            <li><i class="fas fa-check me-2"></i>Priority Support</li>
+                            <li><i class="fas fa-check me-2"></i>Unlimited Accounts</li>
+                            <li><i class="fas fa-check me-2"></i>Client Portal Access</li>
+                            <li><i class="fas fa-check me-2"></i>All Premium Features</li>
+                        </ul>
+                        <a href="#contact" class="learn-more-btn btn-featured w-100 mt-4">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="pricing_card">
+                        <h3 class="pricing_period">Enterprise</h3>
+                        <div class="my-4">
+                            <i class="fas fa-building" style="font-size: 3rem; color: #667eea;"></i>
+                        </div>
+                        <div class="pricing_rate">₹12,999</div>
+                        <p class="pricing_text">per month</p>
+                        <ul class="list-unstyled mt-4">
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Analytics</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Dedicated Manager</li>
+                            <li><i class="fas fa-check text-success me-2"></i>White-label Solutions</li>
+                            <li><i class="fas fa-check text-success me-2"></i>API Access</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Integrations</li>
+                        </ul>
+                        <a href="#contact" class="learn-more-btn w-100 mt-4">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="text-center p-5 rounded-4" style="background: var(--primary-gradient);" data-aos="zoom-in" data-aos-duration="1000">
+                        <h3 class="text-white mb-3">Ready to Transform Your Business?</h3>
+                        <p class="text-white opacity-75 mb-4">Join thousands of successful businesses that trust Shanell Marketing Agency</p>
+                        <a href="#contact" class="learn-more-btn btn-featured me-3">
+                            <i class="fas fa-rocket me-2"></i>Start Your Free Trial
+                        </a>
+                        <button class="learn-more-btn" data-bs-toggle="modal" data-bs-target="#demoModal">
+                            <i class="fas fa-calendar me-2"></i>Book Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Portal Section -->
+    <section id="portal" class="portal-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Client Experience</p>
+                    <h2 class="section-title">Advanced Client Portal</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="portal-card">
+                        <h4 class="mb-4">Portal Features</h4>
+                        <div class="portal-feature">
+                            <div class="portal-icon" style="background: var(--primary-gradient);">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Real-time Analytics</h6>
+                                <p class="mb-0 text-muted">Track campaign performance with live data updates</p>
+                            </div>
+                        </div>
+                        <div class="portal-feature">
+                            <div class="portal-icon" style="background: var(--secondary-gradient);">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Custom Reports</h6>
+                                <p class="mb-0 text-muted">Generate detailed reports on demand</p>
+                            </div>
+                        </div>
+                        <div class="portal-feature">
+                            <div class="portal-icon" style="background: var(--accent-gradient);">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Project Management</h6>
+                                <p class="mb-0 text-muted">Track project progress and milestones</p>
+                            </div>
+                        </div>
+                        <div class="portal-feature">
+                            <div class="portal-icon" style="background: var(--success-gradient);">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Direct Communication</h6>
+                                <p class="mb-0 text-muted">Chat directly with your account manager</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="learn-more-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="fas fa-sign-in-alt me-2"></i>Access Portal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="dashboard-preview">
+                        <h5 class="mb-3">Live Dashboard Preview</h5>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number">2,847</div>
+                                    <div>Website Visitors</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number">4.2%</div>
+                                    <div>Conversion Rate</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number">68K</div>
+                                    <div>Social Reach</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card">
+                                    <div class="metric-number">312%</div>
+                                    <div>ROI Growth</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-light rounded p-3">
+                            <h6 class="mb-2">Recent Activity</h6>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <small>Campaign launched</small>
+                                <small class="text-muted">2 hours ago</small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <small>Report generated</small>
+                                <small class="text-muted">5 hours ago</small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small>Meeting scheduled</small>
+                                <small class="text-muted">1 day ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonial_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Client Success Stories</p>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                </div>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="text-center">
+                        <div class="rounded-circle bg-gradient d-inline-flex align-items-center justify-content-center" style="width: 150px; height: 150px; background: var(--primary-gradient);">
+                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="testimonial_card">
+                        <h4>James Rodriguez</h4>
+                        <p class="text-muted mb-3">Chief Executive Officer, TechCorp</p>
+                        <p class="lead">"Shanell Marketing Agency transformed our digital presence completely. Their strategic approach and innovative solutions helped us achieve a 300% increase in lead generation within just 6 months. Outstanding results!"</p>
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#caseStudyModal" data-case="techcorp">View Full Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="text-center">
+                        <div class="rounded-circle bg-gradient d-inline-flex align-items-center justify-content-center" style="width: 150px; height: 150px; background: var(--secondary-gradient);">
+                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="testimonial_card">
+                        <h4>Sarah Johnson</h4>
+                        <p class="text-muted mb-3">Marketing Director, Global Retail Inc.</p>
+                        <p class="lead">"The team at Shanell is exceptional. Their data-driven approach and creative campaigns have significantly boosted our brand visibility and customer engagement. We've seen remarkable ROI improvements across all channels."</p>
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="learn-more-btn btn-sm" data-bs-toggle="modal" data-bs-target="#caseStudyModal" data-case="retail">View Full Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="brand_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Trusted Partners</p>
+                    <h2 class="section-title">Brands We've Helped Grow</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-2 col-md-3 col-4 mb-4">
+                    <div class="text-center brand-logo">
+                        <i class="fab fa-apple" style="font-size: 3rem; color: #667eea;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4">
+                    <div class="text-center brand-logo">
+                        <i class="fab fa-google" style="font-size: 3rem; color: #667eea;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4">
+                    <div class="text-center brand-logo">
+                        <i class="fab fa-microsoft" style="font-size: 3rem; color: #667eea;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4">
+                    <div class="text-center brand-logo">
+                        <i class="fab fa-amazon" style="font-size: 3rem; color: #667eea;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4">
+                    <div class="text-center brand-logo">
+                        <i class="fab fa-spotify" style="font-size: 3rem; color: #667eea;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4">
+                    <div class="text-center brand-logo">
+                        <i class="fab fa-slack" style="font-size: 3rem; color: #667eea;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-subtitle">Got Questions?</p>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+            </div>
+            <!-- FAQ Search -->
+            <div class="faq-search position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="form-control search-input" placeholder="Search frequently asked questions..." id="faqSearch">
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item faq-item" data-keywords="free trial account setup">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How does the free trial work?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our free trial gives you full access to our Starter plan for 14 days. No credit card required. You'll get complete access to basic analytics, email support, and up to 5 social media accounts to test our platform thoroughly.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item" data-keywords="trial end subscription billing">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What happens when my trial ends?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    When your trial ends, you can choose to upgrade to one of our paid plans to continue enjoying our services. If you don't upgrade, your account will be paused, but your data will be safely stored for 30 days.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item" data-keywords="payment methods credit card paypal billing">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How do I make payments?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through industry-standard encryption. You can also set up automatic billing for convenience.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item" data-keywords="upgrade downgrade plan change pricing">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can I upgrade my plan anytime?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and billing is prorated accordingly. Our team is always ready to help you choose the best plan for your needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item" data-keywords="support help customer service contact">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do I get support?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer multiple support channels: email support for all plans, priority chat support for Professional and Enterprise plans, and dedicated account managers for Enterprise clients. Our average response time is under 2 hours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item" data-keywords="data security privacy protection">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Is my data secure?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we take data security very seriously. All data is encrypted in transit and at rest, we're GDPR compliant, and we undergo regular security audits. Your data is backed up daily and stored in multiple secure locations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="text-center">
+                        <i class="fas fa-question-circle" style="font-size: 12rem; color: #667eea; opacity: 0.7;"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Support CTA -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);" data-aos="zoom-in" data-aos-duration="1000">
+                        <h3 class="text-white mb-3">Still Have Questions?</h3>
+                        <p class="text-white opacity-75 mb-4">Our expert team is here to help you succeed</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="#contact" class="learn-more-btn btn-featured">
+                                <i class="fas fa-comments me-2"></i>Free Consultation
+                            </a>
+                            <button class="learn-more-btn" onclick="openLiveChat()">
+                                <i class="fas fa-headset me-2"></i>Live Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mb-4">Stay Updated with Marketing Insights</h2>
+                    <p class="text-white opacity-75 mb-4">Get weekly tips, industry trends, and exclusive resources delivered to your inbox</p>
+                    <div class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control newsletter-input" placeholder="Enter your email address" id="newsletterEmail">
+                            <button class="btn btn-success" type="button" onclick="subscribeNewsletter()">
+                                <i class="fas fa-paper-plane me-1"></i>Subscribe Free
+                            </button>
+                        </div>
+                        <small class="text-white-50 mt-2 d-block">No spam, unsubscribe anytime. Join 15,000+ marketers.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="footer_logo mb-4">
+                        <h3 class="text-white">
+                            <i class="fas fa-rocket me-2"></i>Shanell Marketing
+                        </h3>
+                    </div>
+                    <p class="footer_text mb-4">
+                        Empowering businesses with innovative digital marketing solutions that drive growth, enhance engagement, and deliver measurable results in today's competitive landscape.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#" class="footer_social_media_icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_social_media_icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_social_media_icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer_social_media_icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer_social_media_icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h4 class="footer_title mb-4">Contact Information</h4>
+                    <div class="footer_contact">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-envelope me-3 mt-1"></i>
+                            <div>
+                                <a href="mailto:hello@shanellmarketing.com" class="text-white text-decoration-none">hello@shanellmarketing.com</a>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone me-3 mt-1"></i>
+                            <div>
+                                <a href="tel:+1234567890" class="text-white text-decoration-none">+1 (234) 567-8900</a>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-map-marker-alt me-3 mt-1"></i>
+                            <div class="text-white-50">
+                                123 Business Street<br>
+                                Marketing District, MD 12345<br>
+                                United States
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h4 class="footer_title mb-4">Quick Links</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                                <li class="mb-2"><a href="#features" class="text-white-50 text-decoration-none">Services</a></li>
+                                <li class="mb-2"><a href="#pricing" class="text-white-50 text-decoration-none">Pricing</a></li>
+                                <li class="mb-2"><a href="#blog" class="text-white-50 text-decoration-none">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#resources" class="text-white-50 text-decoration-none">Resources</a></li>
+                                <li class="mb-2"><a href="#webinars" class="text-white-50 text-decoration-none">Webinars</a></li>
+                                <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                                <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white opacity-25">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-white-50">
+                        © 2024 Shanell Marketing Agency. All rights reserved. | 
+                        Crafted with <i class="fas fa-heart text-danger"></i> for your success
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-btn" onclick="openLiveChat()" title="Live Chat Support">
+            <i class="fas fa-comments"></i>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Client Portal Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="Enter your password">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn learn-more-btn w-100">Login to Portal</button>
+                    </form>
+                    <hr>
+                    <div class="text-center">
+                        <p class="mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Modal -->
+    <div class="modal fade" id="serviceModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Service Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="serviceContent">
+                        <h4>Strategic Consultancy</h4>
+                        <p class="lead">Transform your marketing strategy with expert guidance.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>What's Included:</h6>
+                                <ul>
+                                    <li>Comprehensive market analysis</li>
+                                    <li>Competitor research</li>
+                                    <li>Strategic roadmap development</li>
+                                    <li>Performance metrics setup</li>
+                                    <li>Monthly strategy reviews</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Expected Outcomes:</h6>
+                                <ul>
+                                    <li>Clear marketing direction</li>
+                                    <li>Improved ROI tracking</li>
+                                    <li>Better resource allocation</li>
+                                    <li>Increased conversion rates</li>
+                                    <li>Long-term growth strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn learn-more-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Free Consultation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div class="modal fade" id="blogModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Blog Post</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="blogContent">
+                        <h4>10 Digital Marketing Trends for 2025</h4>
+                        <div class="blog-meta mb-3">
+                            <i class="fas fa-calendar me-2"></i>December 15, 2024
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user me-2"></i>Sarah Johnson
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-clock me-2"></i>5 min read
+                        </div>
+                        <p class="lead">Discover the latest trends that will shape digital marketing in 2025 and beyond.</p>
+                        <p>The digital marketing landscape is constantly evolving, and staying ahead of the curve is crucial for business success. Here are the top 10 trends we predict will dominate 2025:</p>
+                        <h5>1. AI-Powered Personalization</h5>
+                        <p>Artificial intelligence will revolutionize how we personalize customer experiences, making them more relevant and engaging than ever before.</p>
+                        <h5>2. Voice Search Optimization</h5>
+                        <p>With the rise of smart speakers and voice assistants, optimizing for voice search will become essential for maintaining visibility.</p>
+                        <p class="text-muted">Continue reading the full article on our blog...</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn learn-more-btn" onclick="window.open('#', '_blank')">Read Full Article</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Webinar Registration Modal -->
+    <div class="modal fade" id="webinarModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register for Webinar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="webinarDetails">
+                        <h4>Digital Marketing Mastery</h4>
+                        <p><i class="fas fa-calendar me-2"></i>December 20, 2024 | 2:00 PM EST</p>
+                        <p><i class="fas fa-clock me-2"></i>2 hours | Interactive Session</p>
+                        <p class="lead">Master advanced digital marketing strategies for 2025.</p>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <button type="submit" class="btn learn-more-btn w-100">Register Now - FREE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Modal -->
+    <div class="modal fade" id="caseStudyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Client Success Story</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="caseStudyContent">
+                        <h4>TechCorp: 300% Lead Generation Increase</h4>
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h3 class="text-primary">300%</h3>
+                                    <p class="mb-0">Lead Increase</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h3 class="text-success">6 Months</h3>
+                                    <p class="mb-0">Timeline</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h3 class="text-warning">$2.5M</h3>
+                                    <p class="mb-0">Revenue Impact</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>The Challenge</h5>
+                        <p>TechCorp was struggling with low lead generation and poor conversion rates from their existing marketing efforts.</p>
+                        <h5>Our Solution</h5>
+                        <p>We implemented a comprehensive digital marketing strategy including SEO optimization, targeted PPC campaigns, and content marketing.</p>
+                        <h5>Results</h5>
+                        <p>Within 6 months, TechCorp saw a 300% increase in qualified leads and a significant improvement in their sales pipeline.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn learn-more-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Similar Results</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div class="modal fade" id="consultationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book Free Consultation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead text-center mb-4">Let's discuss how we can help grow your business</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Monthly Marketing Budget</label>
+                            <select class="form-control" required>
+                                <option value="">Select budget range</option>
+                                <option value="<5k">Less than $5,000</option>
+                                <option value="5k-15k">$5,000 - $15,000</option>
+                                <option value="15k-50k">$15,000 - $50,000</option>
+                                <option value="50k+">$50,000+</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">What's your biggest marketing challenge?</label>
+                            <textarea class="form-control" rows="3" placeholder="Tell us about your goals and challenges..."></textarea>
+                        </div>
+                        <button type="submit" class="btn learn-more-btn w-100">Book My Free Consultation</button>
+                    </form>
+                    <p class="text-center text-muted mt-3 mb-0">
+                        <small>We'll contact you within 24 hours to schedule your consultation.</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div class="modal fade" id="demoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Schedule Live Demo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead text-center mb-4">See our platform in action with a personalized demo</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Business Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Company Size</label>
+                            <select class="form-control" required>
+                                <option value="">Select company size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="200+">200+ employees</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Preferred Demo Time</label>
+                            <select class="form-control" required>
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                <option value="evening">Evening (5 PM - 8 PM)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn learn-more-btn w-100">Schedule Demo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Missing Blog Archive Modal -->
+    <div class="modal fade" id="blogArchiveModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Blog Archive</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-center">Explore our full library of marketing insights, guides, and case studies.</p>
+                    <div class="d-grid">
+                        <a href="#" class="learn-more-btn">Visit Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation link highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stats-number, .metric-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                if (target && !counter.hasAttribute('data-animated')) {
+                    counter.setAttribute('data-animated', 'true');
+                    let current = 0;
+                    const increment = target / 100;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = counter.textContent.includes('%') ? target + '%' : 
+                                                counter.textContent.includes('K') ? Math.round(target/1000) + 'K' :
+                                                target + '+';
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current) + (counter.textContent.includes('+') ? '+' : '');
+                        }
+                    }, 20);
+                }
+            });
+        };
+
+        // Trigger counter animation when visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                }
+            });
+        });
+        document.querySelectorAll('.stats-card, .dashboard-preview').forEach(el => {
+            statsObserver.observe(el);
+        });
+
+        // Mobile menu close on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+                }
+            });
+        });
+
+        // ROI Calculator
+        function calculateROI() {
+            const spend = parseFloat(document.getElementById('marketingSpend').value) || 0;
+            const revenue = parseFloat(document.getElementById('revenueGenerated').value) || 0;
+            if (spend > 0 && revenue > 0) {
+                const profit = revenue - spend;
+                const roiPercent = ((profit / spend) * 100).toFixed(1);
+                document.getElementById('roiPercent').textContent = roiPercent + '%';
+                document.getElementById('roiProfit').textContent = '$' + profit.toLocaleString();
+                document.getElementById('roiResult').style.display = 'block';
+            } else {
+                alert('Please enter valid amounts for both fields.');
+            }
+        }
+
+        // Engagement Calculator
+        function calculateEngagement() {
+            const frequency = document.getElementById('postFrequency').value;
+            const engagement = parseFloat(document.getElementById('engagementRate').value) || 0;
+            if (frequency && engagement > 0) {
+                let score = 0;
+                let recommendation = '';
+                // Calculate score based on frequency
+                switch(frequency) {
+                    case 'daily': score += 40; break;
+                    case 'weekly': score += 25; break;
+                    case 'monthly': score += 10; break;
+                    case 'rarely': score += 5; break;
+                }
+                // Add engagement rate score
+                if (engagement >= 5) score += 60;
+                else if (engagement >= 3) score += 40;
+                else if (engagement >= 1) score += 20;
+                else score += 10;
+                // Generate recommendation
+                if (score >= 80) {
+                    recommendation = 'Excellent! You\'re doing great. Focus on maintaining quality and exploring new platforms.';
+                } else if (score >= 60) {
+                    recommendation = 'Good job! Consider increasing post frequency and focusing on more engaging content.';
+                } else if (score >= 40) {
+                    recommendation = 'There\'s room for improvement. Try posting more consistently and engaging with your audience.';
+                } else {
+                    recommendation = 'Let\'s work together to improve your social media strategy significantly.';
+                }
+                document.getElementById('engagementScore').textContent = 'Your Score: ' + score + '/100';
+                document.getElementById('engagementRecommendation').textContent = recommendation;
+                document.getElementById('engagementResult').style.display = 'block';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        // Newsletter subscription
+        function subscribeNewsletter() {
+            const email = document.getElementById('heroEmail')?.value || document.getElementById('newsletterEmail')?.value;
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! You\'ll receive our weekly marketing insights soon.');
+                if (document.getElementById('heroEmail')) document.getElementById('heroEmail').value = '';
+                if (document.getElementById('newsletterEmail')) document.getElementById('newsletterEmail').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+
+        // Resource download simulation
+        function downloadResource(type) {
+            const resources = {
+                'guide': 'Digital Marketing Guide (PDF)',
+                'seo': 'SEO Checklist (PDF)', 
+                'calendar': 'Content Calendar Template (Excel)',
+                'persona': 'Buyer Persona Template (PDF)',
+                'email': 'Email Templates (ZIP)',
+                'cases': 'Case Study Collection (PDF)'
+            };
+            alert(`Thank you! Your ${resources[type]} download will begin shortly. Check your email for the download link.`);
+        }
+
+        // Live chat function
+        function openLiveChat() {
+            alert('Live chat feature would open here. Connect with our support team for immediate assistance!');
+        }
+
+        // FAQ Search functionality
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const keywords = item.getAttribute('data-keywords').toLowerCase();
+                const questionText = item.querySelector('.accordion-button').textContent.toLowerCase();
+                const answerText = item.querySelector('.accordion-body').textContent.toLowerCase();
+                if (keywords.includes(searchTerm) || questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm ? 'none' : 'block';
+                }
+            });
+        });
+
+        // Dynamic modal content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Service modal content switcher
+            const serviceModal = document.getElementById('serviceModal');
+            serviceModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const service = button.getAttribute('data-service');
+                const serviceContent = {
+                    'consultancy': {
+                        title: 'Strategic Consultancy',
+                        description: 'Transform your marketing strategy with expert guidance.',
+                        included: ['Comprehensive market analysis', 'Competitor research', 'Strategic roadmap development', 'Performance metrics setup', 'Monthly strategy reviews'],
+                        outcomes: ['Clear marketing direction', 'Improved ROI tracking', 'Better resource allocation', 'Increased conversion rates', 'Long-term growth strategy']
+                    },
+                    'technical': {
+                        title: 'Technical Solutions',
+                        description: 'Advanced technology implementation for marketing excellence.',
+                        included: ['Marketing automation setup', 'CRM integration', 'Analytics configuration', 'API integrations', '24/7 technical support'],
+                        outcomes: ['Streamlined workflows', 'Better data insights', 'Improved efficiency', 'Reduced manual work', 'Scalable systems']
+                    }
+                };
+                if (service && serviceContent[service]) {
+                    const content = serviceContent[service];
+                    document.getElementById('serviceContent').innerHTML = `
+                        <h4>${content.title}</h4>
+                        <p class="lead">${content.description}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>What's Included:</h6>
+                                <ul>
+                                    ${content.included.map(item => `<li>${item}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Expected Outcomes:</h6>
+                                <ul>
+                                    ${content.outcomes.map(item => `<li>${item}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            // Form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your submission! We\'ll get back to you within 24 hours.');
+                    form.reset();
+                    // Close any open modals
+                    const openModal = document.querySelector('.modal.show');
+                    if (openModal) {
+                        bootstrap.Modal.getInstance(openModal).hide();
+                    }
+                });
+            });
+        });
+
+        // Simulate real-time dashboard updates
+        setInterval(function() {
+            const metrics = ['visitorCount', 'conversionRate', 'socialReach', 'roiPercent'];
+            metrics.forEach(metric => {
+                const element = document.getElementById(metric);
+                if (element) {
+                    const current = element.textContent;
+                    const randomChange = Math.random() > 0.5;
+                    if (randomChange) {
+                        // Simulate small changes in metrics
+                        if (metric === 'visitorCount') {
+                            const newValue = parseInt(current.replace(',', '')) + Math.floor(Math.random() * 10);
+                            element.textContent = newValue.toLocaleString();
+                        } else if (metric === 'conversionRate') {
+                            const newValue = (parseFloat(current) + (Math.random() * 0.2 - 0.1)).toFixed(1);
+                            element.textContent = newValue + '%';
+                        }
+                    }
+                }
+            });
+        }, 10000); // Update every 10 seconds
+    </script>
+</body>
+</html>
